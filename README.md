@@ -1,4 +1,4 @@
-This Docker Workshop was created with [reveal.js ](https://github.com/hakimel/reveal.js).
+This Docker Workshop was created with [reveal.js](https://github.com/hakimel/reveal.js).
 
 ## Table of contents
 
