@@ -49,7 +49,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #000;
-  font-family: "News Cycle", Impact, sans-serif;
+  /* font-family: "News Cycle", Impact, sans-serif; */
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
@@ -265,3 +265,12 @@ body {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+
+.reveal code {
+    text-transform: none; 
+    color: #d7dcdc;
+    background: #3f3f3f;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    display: inline-block; 
+  }

@@ -1,5 +1,11 @@
 This Docker Workshop was created with [reveal.js](https://github.com/hakimel/reveal.js).
 
+A lof ot the content was taken from this repo [docker-workshop](https://github.com/gvilarino/docker-workshop). 
+
+# Docker Workshop
+
+A simple docker workshop for anyone who wants to learn how to use docker effectively in their day-to-day dev work.
+
 ## Table of contents
 
 - [Full setup](#full-setup)

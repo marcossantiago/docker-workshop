@@ -4,7 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Docker Workshop</title>
+
+		<meta name="description" content="A simple docker workshop for newbies.">
+		<meta name="author" content="Marcos Santiago">
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/simple.css">
@@ -36,6 +39,12 @@
 						For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
 					-->
 				</section>
+				<section data-markdown="02_running_containers.md"
+						data-separator="^\r?\n---\r?\n$"
+						data-separator-vertical="^\n\n"
+						data-separator-notes="^Note:"
+						data-charset="iso-8859-15">
+				</section>
 			</div>
 		</div>
 
@@ -47,6 +56,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },

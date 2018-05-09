@@ -1,22 +1,30 @@
-## Docker Workshop
+## Docker
+
+---
+
+### Index
+
+[Basics](#/3/)
+[Running Containers](#/running-containers)
 
 ---
 
 ## What is a Docker Container ?
 
-Briefly explain
+---
+
+## What problem does Docker solve ?
 
 ---
 
-## FUNDAMENTALS
+## Hands On!
 
 ---
 
-Let's run a simple container:
+Let's run a simple container
 
 ```sh
-$ docker run hello-world
-
+docker run hello-world
 ```
 Note:
 What just happened ? What can you see ? Pulled image and run the container.
@@ -26,17 +34,17 @@ What just happened ? What can you see ? Pulled image and run the container.
 That was easy. Let's check the container:
 
 ```sh
-$ docker ps
+docker ps
 ```
 Note:
 Why you cannot see the container listed ?
 
 ---
 
-Nothing there. Let's try again with `-a` flag
+Nothing there. Let's try again with `--all` flag
 
 ```sh
-$ docker ps -a 
+docker ps --all
 ```
 
 ---
@@ -44,7 +52,7 @@ $ docker ps -a
 Running a real OS now.
 
 ```sh
-$ docker run ubuntu:17.10
+docker run ubuntu:17.10
 ```
 
 What will happen if you run `$ docker ps`?
@@ -57,10 +65,8 @@ Run `docker ps -a` to see the container.
 So it stops after it runs? Let's try something else:
 
 ```sh
-$ docker run -it ubuntu:17.10
+docker run --interactive --tty ubuntu:17.10 /bin/bash
 ```
-
----
 
 We're now inside the container. Try:
 
@@ -78,32 +84,79 @@ $ exit
 Try again:
 
 ```sh
-$ docker run -it ubuntu:17.10
-$ figlet "Docker is awesome"
+docker run -it ubuntu:17.10 /bin/bash
+figlet "Docker is awesome"
+exit
 ```
 
 ---
 
 What's different from the previous run ?
+
 Why figlet fails now ?
 
+Container has died :/
+
 Note: 
-Interactive, tag, new container.
+Interactive, tag, new container, ephemeral, stateless.
 
 ---
 
 ### Interactive mode
 
-`-it` specifies you want to go into the interactive mode 
-* i is interactive 
+`-it` specifies you want to go into the interactive mode
+
+* i is interactive
 * t is for docker to allocate a pseudo TTY interface for the interaction
 
 ---
 
 ### Tags
 
-`:17.10` specifies the tag on the ubuntu repository. 
+`:17.10` specifies the tag on the ubuntu repository.
 
 Let's check other tags on:
 
 https://hub.docker.com/_/ubuntu/
+
+---
+
+### Images
+
+Get a base image
+
+```sh
+docker pull ubuntu:latest
+```
+
+List all images:
+```sh
+docker images
+```
+
+---
+
+Pull the other images:
+
+```sh
+docker pull ubuntu:18.04
+docker pull ubuntu:bionic
+docker images
+```
+
+What's the difference in between latest, 18.04 and bionic?
+
+Note:
+Image ID should be the same.
+
+---
+
+### Recap
+
+* docker commands: run, images, pull, ps
+* interactive mode and tags
+* docker hub
+* ephemeral
+
+---
+
