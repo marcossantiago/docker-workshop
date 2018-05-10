@@ -1,10 +1,15 @@
-## Docker
+### Another Docker Workshop
+
+![Docker Logo](/img/docker-logo.png)
+
+##### The contents of this workshop have been borrowed from the internet. 
 
 ---
 
 ### Index
 
 [Basics](#/3/)
+
 [Running Containers](#/running-containers)
 
 ---
@@ -13,7 +18,73 @@
 
 ---
 
-## What problem does Docker solve ?
+> "A container image is a lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings."
+
+---
+
+#### Package software into standardized units for development, shipment and deployment
+
+---
+
+Is basically a virtual machine, right ?
+
+---
+
+Not Really! *funny gif here*
+
+---
+
+#### Comparing Containers and Virtual Machines
+
+![container-infra](/img/01/container-infra.png)
+![vm-infra](/img/01/vm-infra.png)
+Note:
+Containers are an abstraction at the app layer that packages code and dependencies together. Multiple containers can run on the same machine and share the OS kernel with other containers, each running as isolated processes in user space. Containers take up less space than VMs (container images are typically tens of MBs in size), and start almost instantly. 
+
+Virtual machines (VMs) are an abstraction of physical hardware turning one server into many servers. The hypervisor allows multiple VMs to run on a single machine. Each VM includes a full copy of an operating system, one or more apps, necessary binaries and libraries - taking up tens of GBs. VMs can also be slow to boot.
+
+---
+
+### Containers and VM together
+
+![Containers and VMs together](/img/01/containers-vms-together.png)
+
+Note:
+Containers are isolated but share OS and, where appropriate bin/libraies. Faster deployment, less overhead, faster restart, easier migration. 
+
+---
+
+## What problem does Docker solve?
+
+---
+
+## The Challenge
+
+![the-challenge](/img/01/the-challenge.png)
+
+---
+
+## The Matrix from Hell
+
+![the-matrix-from-hell](/img/01/the-matrix-from-hell.png)
+
+---
+
+### Container system for code
+
+![shipping-container-for-code](/img/01/shipping-container-for-code.png)
+
+---
+
+### Eliminates the matrix hell
+
+![eliminates-matrix-from-hell](/img/01/eliminates-matrix-from-hell.png)
+
+---
+
+#### Why it works: Separation of Concerns
+
+![separation-of-concerns](/img/01/separation-of-concerns.png)
 
 ---
 
