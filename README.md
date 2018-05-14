@@ -29,7 +29,7 @@ To open Cloud9 select the URL in the Outputs of the CloudFormation stack.
 
 ### Setup Script
 
-Download and run the environment setup script
+From the Cloud9 IDE terminal, download and run the environment setup script:
 
 ```bash
 $ aws s3 cp s3://docker-workshop-quickstart/lab-ide-build.sh . && \
@@ -37,9 +37,10 @@ $ aws s3 cp s3://docker-workshop-quickstart/lab-ide-build.sh . && \
     . ./lab-ide-build.sh
 ```
 
-The output should show the endpoint for the environment:
+The output should output the endpoint for your environment:
 
 ```bash
+...
  Details:
  --------
  Docker Workshop Version: May 2018
@@ -48,11 +49,13 @@ The output should show the endpoint for the environment:
 
 ## Run your first Web Server with Docker
 
+From the Cloud9 IDE terminal run an nginx docker container, exposing port 80.
+
 ```bash
 $ docker run -it --rm -p 80:80 nginx
 ```
 
-Navigate to the Endpoint URL on port 80 (HTTP) to view the nginx welcome page.
+Navigate to the Endpoint URL on **HTTP** port 80 to view the nginx welcome page.
 
 ## Full setup
 
