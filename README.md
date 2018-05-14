@@ -37,6 +37,23 @@ $ aws s3 cp s3://docker-workshop-quickstart/lab-ide-build.sh . && \
     . ./lab-ide-build.sh
 ```
 
+The output should show the endpoint for the environment:
+
+```bash
+ Details:
+ --------
+ Docker Workshop Version: May 2018
+ Endpoint URL: https://ec2-34-216-12-241.us-west-2.compute.amazonaws.com
+```
+
+## Run your first Web Server with Docker
+
+```bash
+$ docker run -it --rm -p 80:80 nginx
+```
+
+Navigate to the Endpoint URL on port 80 (HTTP) to view the nginx welcome page.
+
 ## Full setup
 
 Some reveal.js features, like external Markdown and speaker notes, require that presentations run from a local web server. The following instructions will set up such a server as well as all of the development tasks needed to make edits to the reveal.js source code.
