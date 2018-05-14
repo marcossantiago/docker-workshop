@@ -1,6 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Lab IDE using new public subnet for container workshop v0.4
-Metadata: {}
+Description: Lab IDE using new public subnet for Docker Workshop May 2018
 Parameters:
   EnvironmentInstance:
     Type: String
@@ -247,6 +246,10 @@ Resources:
             - '            ec2.associate_iam_instance_profile(IamInstanceProfile=iam_instance_profile,
               InstanceId=instance[''InstanceId''])'
             - '            '
+            - '            # Open port 80 & 443'
+            - '            sec_group_id = ec2.describe_instances(InstanceIds=[instance[''InstanceId'']])[''Reservations''][0][''Instances''][0][''SecurityGroups''][0][''GroupId'']'
+            - '            ec2.authorize_security_group_ingress(GroupId=sec_group_id, CidrIp=''0.0.0.0/0'', FromPort=80, ToPort=80, IpProtocol=''tcp'')'
+            - '            ec2.authorize_security_group_ingress(GroupId=sec_group_id, CidrIp=''0.0.0.0/0'', FromPort=443, ToPort=443, IpProtocol=''tcp'')'
             - '            responseData = {''Success'': ''Role added to instance''+instance[''InstanceId'']+''.''}'
             - '            cfnresponse.send(event, context, cfnresponse.SUCCESS, responseData,
               ''CustomResourcePhysicalID'')'
@@ -292,6 +295,7 @@ Resources:
                   - ec2:DescribeInstances
                   - ec2:AssociateIamInstanceProfile
                   - ec2:ReplaceIamInstanceProfileAssociation
+                  - ec2:AuthorizeSecurityGroupIngress
                   - iam:ListInstanceProfiles
                   - iam:PassRole
                 Resource: '*'
