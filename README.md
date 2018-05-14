@@ -9,7 +9,7 @@ A simple docker workshop for anyone who wants to learn how to use docker effecti
 ## Table of contents
 
 - [Quickstart with Amazon Cloud9](#Quickstart-with-Amazon-Cloud9)
-- [Full setup](#full-setup)
+- [Docker Presentation](#run-docker-presentation)
 
 ## Quickstart with Amazon Cloud9
 
@@ -57,7 +57,7 @@ $ docker run -it --rm -p 80:80 nginx
 
 Navigate to the Endpoint URL on **HTTP** port 80 to view the nginx welcome page.
 
-## Full setup
+## Run Docker Presentation
 
 Some reveal.js features, like external Markdown and speaker notes, require that presentations run from a local web server. The following instructions will set up such a server as well as all of the development tasks needed to make edits to the reveal.js source code.
 
