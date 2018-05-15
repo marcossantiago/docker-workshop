@@ -6,6 +6,9 @@ sudo yum -y install jq
 # Install bash-completion
 sudo yum install bash-completion -y
 
+# Install docker-compose
+sudo -H python -m pip install -U docker-compose pip
+
 if [ ! -d "docker-workshop/" ]; then
   # Download lab Repository
   git clone https://github.com/marcossantiago/docker-workshop.git
