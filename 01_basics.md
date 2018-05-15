@@ -6,14 +6,6 @@
 
 ---
 
-### Index
-
-[Basics](#/3/)
-
-[Running Containers](#/running-containers)
-
----
-
 ## What is a Docker Container ?
 
 ---
@@ -30,7 +22,7 @@ Is basically a virtual machine, right ?
 
 ---
 
-Not Really! *funny gif here*
+Not Really!
 
 ---
 
@@ -89,6 +81,14 @@ Containers are isolated but share OS and, where appropriate bin/libraies. Faster
 ---
 
 ## Hands On!
+
+---
+
+### Launch Cloud9 
+
+https://github.com/marcossantiago/docker-workshop
+
+Thanks Jason ;)
 
 ---
 
@@ -173,6 +173,10 @@ Interactive, tag, new container, ephemeral, stateless.
 
 ---
 
+> The way containers work is that there is one single main process that gets assigned pid 1, which runs as the containers starts, and as soon as that process exits, the container is stopped, even if there were other processes running inside of it.
+
+---
+
 ### Interactive mode
 
 `-it` specifies you want to go into the interactive mode
@@ -228,6 +232,3 @@ Image ID should be the same.
 * interactive mode and tags
 * docker hub
 * ephemeral
-
----
-

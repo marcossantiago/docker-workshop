@@ -23,5 +23,5 @@ cat <<EOF
  Docker Workshop Version: May 2018
 EOF
 
-echo " Endpoint URL: https://"$(curl -s http://169.254.169.254/latest/meta-data/public-hostname/)
+echo " Endpoint URL: http://"$(curl -s http://169.254.169.254/latest/meta-data/public-hostname/)
 echo ""
